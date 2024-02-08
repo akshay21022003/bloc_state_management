@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => CounterBloc()),
-         BlocProvider(create: (_) => SwitchBloc()),
+        BlocProvider(create: (_) => SwitchBloc()),
       ], 
       child: MaterialApp(
             title: 'Flutter Demo',
