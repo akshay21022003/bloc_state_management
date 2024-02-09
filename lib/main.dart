@@ -1,6 +1,8 @@
 import 'package:block_state_management/bloc/counter/counter_bloc.dart';
 import 'package:block_state_management/bloc/switch/switch_bloc.dart';
+import 'package:block_state_management/bloc/todolist/todolist_bloc.dart';
 import 'package:block_state_management/ui/switch/switch_screen.dart';
+import 'package:block_state_management/ui/todolist/todolist_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => CounterBloc()),
         BlocProvider(create: (_) => SwitchBloc()),
+        BlocProvider(create: (_)=>ToDoListBloc())
       ], 
       child: MaterialApp(
             title: 'Flutter Demo',
@@ -23,7 +26,8 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: const SwitchScreen())
+            home: const ToDoListScreen()
+            )
       );
   }
 }
